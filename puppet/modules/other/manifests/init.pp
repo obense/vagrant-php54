@@ -1,9 +1,14 @@
 class other 
 {
+    $packages = [
+        "curl", 
+        "vim"
+    ]
+    
     package 
     { 
-        "curl":
-            ensure  => present,
+        $packages:
+            ensure  => latest,
             require => Exec['apt-get update']
     }
 }

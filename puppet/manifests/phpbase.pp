@@ -14,9 +14,7 @@ exec
 include bootstrap
 include other
 include apache
-include php54 #specific setup steps for 5.4
+include php54 # steps for PHP 5.4 instead of 5.3 version
 include php
 include mysql
 include phpmyadmin
-
-# include laravel_app
