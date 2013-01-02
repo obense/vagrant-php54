@@ -1,4 +1,4 @@
-# -*- mode: ruby -*-
+    # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
 Vagrant::Config.run do |config|
@@ -22,10 +22,10 @@ Vagrant::Config.run do |config|
             puppet.manifests_path = "puppet/manifests"
             puppet.manifest_file  = "phpbase.pp"
             puppet.module_path = "puppet/modules"
-            # puppet.options = "--verbose --debug"
+            puppet.options = "--verbose --debug"
             # puppet.options = "--verbose"
         end
-        
+
         # devbox_config.vm.provision :shell, :path => "puppet/scripts/enable_remote_mysql_access.sh"
     end
 end

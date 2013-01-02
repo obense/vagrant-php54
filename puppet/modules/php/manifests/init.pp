@@ -20,17 +20,18 @@ class php
             require => [Exec['apt-get update'], Package['python-software-properties']]
     }
   
-    # exec 
-    # { 
-    #     "sed -i 's|#|//|' /etc/php5/cli/conf.d/mcrypt.ini":
-  		#     require => Package['php5'],
-    # }
+    exec 
+    { 
+        "sed -i 's|#|//|' /etc/php5/cli/conf.d/mcrypt.ini":
+  	    require => Package['php5'],
+    }
 
     file 
     { 
         "/etc/php5/apache2/php.ini":
             ensure  => present,
-            owner => root, group => root,
+            owner => root,
+            group => root,
             source  => "/vagrant/puppet/templates/php.ini",
             require => Package['php5'],
     }

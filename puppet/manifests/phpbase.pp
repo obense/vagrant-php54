@@ -18,3 +18,4 @@ include php54 # steps for PHP 5.4 instead of 5.3 version
 include php
 include mysql
 include phpmyadmin
+include vim
