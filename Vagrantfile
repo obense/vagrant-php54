@@ -10,7 +10,7 @@ Vagrant::Config.run do |config|
         devbox_config.ssh.max_tries = 10
 
         config.vm.network :hostonly, "11.11.11.11"
-        devbox_config.vm.host_name = "devbox"
+        devbox_config.vm.host_name = "dev.local"
         # devbox_config.vm.forward_port 80, 8888
         # devbox_config.vm.forward_port 3306, 8889
   		

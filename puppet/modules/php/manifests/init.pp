@@ -22,8 +22,8 @@ class php
   
     exec 
     { 
-        "sed -i 's|#|//|' /etc/php5/cli/conf.d/mcrypt.ini":
-  	    require => Package['php5'],
+        "sed -i 's|#|//|' /etc/php5/mods-available/mcrypt.ini":
+            require => Package['php5'],
     }
 
     file 
@@ -33,7 +33,7 @@ class php
             owner => root,
             group => root,
             source  => "/vagrant/puppet/templates/php.ini",
-            require => Package['php5'],
+            require => Package['apache2', 'php5'],
     }
     
 }

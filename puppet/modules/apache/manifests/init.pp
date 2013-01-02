@@ -32,7 +32,8 @@ class apache
     { 
         "/etc/apache2/sites-available/default":
             ensure  => present,
-            owner => root, group => root,
+            owner => root,
+            group => root,
             source  => "/vagrant/puppet/templates/vhost",
             require => Package['apache2'],
     }
