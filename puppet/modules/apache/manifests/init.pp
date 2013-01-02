@@ -34,7 +34,7 @@ class apache
             ensure  => present,
             owner => root,
             group => root,
-            source  => "/vagrant/puppet/templates/vhost",
+            content  => template('apache/vhost.erb'),
             require => Package['apache2'],
     }
 
