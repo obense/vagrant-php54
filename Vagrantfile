@@ -20,7 +20,7 @@ Vagrant::Config.run do |config|
 
         devbox_config.vm.provision :puppet do |puppet|
             puppet.manifests_path = "puppet/manifests"
-            puppet.manifest_file  = "phpbase.pp"
+            puppet.manifest_file  = "base.pp"
             puppet.module_path = "puppet/modules"
             # puppet.options = "--verbose --debug"
             # puppet.options = "--verbose"
