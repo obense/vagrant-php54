@@ -1,0 +1,14 @@
+= Augeas Puppet module =
+
+== Usage ==
+
+  include augeas
+
+== Description ==
+
+This module does 3 things:
+
+ o provides a few lenses only included in recent augeas releases.
+ 
+ o let's you force the version by defining $augeas_version, else puppet will
+   only ensure the packages are present.

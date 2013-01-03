@@ -16,6 +16,7 @@ include other
 include apache
 include php54 # steps for PHP 5.4 instead of 5.3 version
 include php
+include composer
 include mysql
 include phpmyadmin
 include vim
